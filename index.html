@@ -6,10 +6,11 @@
             var socket = io();
 
             socket.on('bemvindo', function(data) {
+                // Recebendo a mensagem do 'socket.emit' após 'connection'
                 addMessage(data.message);
 
-                // Responda com uma mensagem incluindo o ID desse cliente enviado pelo servidor
-                socket.emit('eu sou cliente', {data: 'foo!', id: data.id});
+                // Respondendo com uma mensagem com o ID desse cliente, enviado pelo servidor
+                socket.emit('cliente', {data: 'Esse é meu ID', id: data.id});
             });
             socket.on('hora', function(data) {
                 addMessage(data.time);
