@@ -23,7 +23,7 @@ setInterval(sendTime, 10000);
 // Emitir mensagem de boas vindas na conexão
 io.on("connection", function(socket) {
   // Use o soquete para se comunicar apenas com este cliente em particular, enviando-o ao seu próprio ID
-  socket.emit("bemvindo", { message: "Bem Vindo!", id: socket.id });
+  socket.emit("Bem-Vindo", { message: "Bem Vindo!", id: socket.id });
 
   socket.on("cliente", console.log);
 });
