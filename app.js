@@ -17,8 +17,8 @@ function sendTime() {
   io.emit("hora", { time: new Date().toJSON() });
 }
 
-// Envie a hora atual a cada 10 segundos
-setInterval(sendTime, 10000);
+// Envie a hora atual a cada 20 segundos
+setInterval(sendTime, 20000);
 
 // Emitir mensagem de boas vindas na conexão
 io.on("connection", function(socket) {
